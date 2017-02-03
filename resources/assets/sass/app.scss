@@ -1,2 +1,13 @@
 // Bulma
 @import "node_modules/bulma/bulma";
+
+// Open Color
+@import "node_modules/open-color/open-color.scss";
+
+.has-bg-gray-0 {
+	background-color: $oc-gray-1;
+}
+
+.is-shadowless {
+	box-shadow: none;
+}

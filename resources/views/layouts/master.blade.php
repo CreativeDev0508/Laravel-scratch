@@ -3,13 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Blog</title>
-	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-	@include('partials.header')
+	<section class="hero is-primary is-medium">
 
-	@yield('content')
+		@include('partials.header')
 
-	@include('partials.footer')
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-three-quarters">
+
+					@yield('content')
+
+				</div>
+
+				<div class="column is-one-quarter">
+
+					@include('partials.sidebar')
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+  		<div class="container">
+
+			@include('partials.footer')
+
+		</div>
+	</footer>
 </body>
 </html>
