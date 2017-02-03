@@ -19,7 +19,13 @@ class PostsController extends Controller
 
     public function store()
     {
-    	// Method 1
+    	// Validation
+    	$this->validate(request(), [
+    		'title' => 'required',
+    		'body' => 'required'
+    	]);
+
+    	// Store - Method 1
     	// $post = new Post;
 
     	// $post->title = request('title');
@@ -27,13 +33,13 @@ class PostsController extends Controller
 
     	// $post->save();
     	
-    	// Method 2
+    	// Store - Method 2
     	// Post::create([
     	// 	'body' => request('body'),
     	// 	'title' => request('title')
     	// ]);
     	
-    	// Method 3
+    	// Store - Method 3
     	Post::create(request(['title', 'body']));
 
     	return redirect('/');

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Blog</title>
+	<script src="https://use.fontawesome.com/3e7a62b64e.js"></script>
 	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>

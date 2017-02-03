@@ -4,10 +4,19 @@
 // Open Color
 @import "node_modules/open-color/open-color.scss";
 
+.content.is-danger {
+	color: #cd0930;
+}
+
 .has-bg-gray-0 {
 	background-color: $oc-gray-1;
 }
 
 .is-shadowless {
 	box-shadow: none;
+}
+
+.has-no-h-padding {
+	padding-left: 0;
+	padding-right: 0;
 }
