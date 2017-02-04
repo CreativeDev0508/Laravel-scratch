@@ -12,4 +12,6 @@ const { mix } = require('laravel-mix');
  */
 
 mix.sass('resources/assets/sass/app.scss', 'public/css')
-	.version();
+	.copy('resources/assets/js/app.js', 'public/js/app.js')
+	.copy('node_modules/simplemde/dist/simplemde.min.js', 'public/js/simplemde.js')
+	.copy('node_modules/simplemde/dist/simplemde.min.css', 'public/css/simplemde.css');
