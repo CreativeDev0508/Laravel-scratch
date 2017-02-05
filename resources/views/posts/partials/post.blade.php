@@ -5,7 +5,7 @@
 </h1>
 
 <p class="subtitle">
-	By {{ $post->user->name }} |  
+	By <a href="/author/{{ $post->user->id }}">{{ $post->user->name }}</a> |  
 	{{ $post->created_at->diffForHumans() }}</p>
 
 <div class="content">

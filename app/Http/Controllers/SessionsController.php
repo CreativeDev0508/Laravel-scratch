@@ -24,7 +24,7 @@ class SessionsController extends Controller
     		]);
     	}
 
-    	return redirect()->home();
+    	return redirect()->to('/home');
     }
 
     public function destroy()

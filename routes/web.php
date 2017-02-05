@@ -7,6 +7,10 @@ Route::get('posts/{post}', 'PostsController@show');
 
 Route::post('posts/{post}/create', 'CommentsController@store');
 
+Route::get('author/{user}', 'AuthorsController@show');
+
+Route::get('home', 'DashboardController@index')->name('dashboard');
+
 Route::get('register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store');
 
