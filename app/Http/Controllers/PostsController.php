@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth')->except([
+			'index',
+			'show'
+		]);
+	}
+
     public function index()
     {
     	$posts = Post::latest()->get();
@@ -32,24 +40,12 @@ class PostsController extends Controller
     		'body' => 'required'
     	]);
 
-    	
-
-    	// Store - Method 1
-    	// $post = new Post;
-
-    	// $post->title = request('title');
-    	// $post->body = request('body');
-
-    	// $post->save();
-    	
-    	// Store - Method 2
-    	// Post::create([
-    	// 	'body' => request('body'),
-    	// 	'title' => request('title')
-    	// ]);
-    	
-    	// Store - Method 3
-    	Post::create(request(['title', 'body']));
+    	auth()->user()->publish(
+    		new Post(request([
+    			'title',
+    			'body'
+    		]))
+    	);
 
     	return redirect('/');
     }

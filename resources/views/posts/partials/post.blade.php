@@ -4,7 +4,9 @@
 	</a>
 </h1>
 
-<p class="subtitle">{{ $post->created_at->diffForHumans() }}</p>
+<p class="subtitle">
+	By {{ $post->user->name }} |  
+	{{ $post->created_at->diffForHumans() }}</p>
 
 <div class="content">
 
