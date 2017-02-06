@@ -14,7 +14,7 @@
 
 	<nav class="pagination is-right">
 		<a href="#" class="pagination-previous">Older</a>
-		<a href="#" class="pagination-next is-disabled">Newer</a>
+		<a href="#" class="pagination-next is-disabled">Newest</a>
 	</nav>
 
 @endsection
