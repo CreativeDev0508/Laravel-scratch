@@ -10,7 +10,7 @@
 
 	<div class="content">
 
-		{!! Markdown::parse($post->body) !!}
+		{!! Markdown::convertToHtml($post->body) !!}
 		
 	</div>
 
