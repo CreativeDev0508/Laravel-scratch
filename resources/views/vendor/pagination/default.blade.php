@@ -1,36 +1,38 @@
 @if ($paginator->hasPages())
-    <ul class="pagination">
+    <nav class="pagination is-centered">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled"><span>&laquo;</span></li>
+        <a class="pagination-previous is-disabled">Previous</a>
         @else
-            <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+            <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="pagination-previous">Previous</a>
         @endif
 
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
             {{-- "Three Dots" Separator --}}
             @if (is_string($element))
-                <li class="disabled"><span>{{ $element }}</span></li>
+                <li><span class="pagination-ellipsis">{{ $element }}</span></li>
             @endif
 
             {{-- Array Of Links --}}
             @if (is_array($element))
-                @foreach ($element as $page => $url)
-                    @if ($page == $paginator->currentPage())
-                        <li class="active"><span>{{ $page }}</span></li>
-                    @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
-                    @endif
-                @endforeach
+                <ul class="pagination-list">
+                    @foreach ($element as $page => $url)
+                        @if ($page == $paginator->currentPage())
+                            <li><a class="pagination-link is-current">{{ $page }}</a></li>
+                        @else
+                            <li><a href="{{ $url }}" class="pagination-link">{{ $page }}</a></li>
+                        @endif
+                    @endforeach
+                </ul>
             @endif
         @endforeach
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+            <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="pagination-next">Next page</a>
         @else
-            <li class="disabled"><span>&raquo;</span></li>
+            <a class="pagination-next is-disabled">Next page</a>
         @endif
-    </ul>
+    </nav>
 @endif
