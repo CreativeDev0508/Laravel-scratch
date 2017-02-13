@@ -180,8 +180,7 @@ return [
         /*
          * Custom Providers
          */
-        AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider::class,
-
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
     ],
 
     /*
@@ -234,8 +233,7 @@ return [
         /*
          * Custom Aliases
          */
-        'Markdown'  => AlfredoRamos\ParsedownExtra\Facades\ParsedownExtra::class,
-
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
     ],
 
 ];

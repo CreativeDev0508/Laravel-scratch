@@ -1,2 +1,2 @@
-// SimpleMDE instantiation
-var simplemde = new SimpleMDE({ element: document.getElementById("body") });
+window.SimpleMDE = require('simplemde');
+require('./simplemde.init');

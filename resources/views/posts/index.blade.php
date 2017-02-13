@@ -12,9 +12,6 @@
 
 	@endforeach
 
-	<nav class="pagination is-right">
-		<a href="#" class="pagination-previous">Older</a>
-		<a href="#" class="pagination-next is-disabled">Newest</a>
-	</nav>
+	{{ $posts->links() }}
 
 @endsection
