@@ -34,6 +34,7 @@ class PostsController extends Controller
 
     public function store()
     {
+        dd(request()->all());
     	// Validation
     	$this->validate(request(), [
     		'title' => 'required',

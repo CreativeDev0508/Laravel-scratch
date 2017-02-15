@@ -8,8 +8,10 @@
   },
   "devDependencies": {
     "bulma": "^0.3.1",
+    "flatpickr": "^2.3.7",
     "laravel-mix": "^0.6.1",
     "open-color": "^1.4.2",
-    "simplemde": "^1.11.2"
+    "simplemde": "^1.11.2",
+    "vue": "^2.1.10"
   }
 }

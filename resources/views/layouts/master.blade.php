@@ -6,40 +6,44 @@
 	<script src="https://use.fontawesome.com/3e7a62b64e.js"></script>
 	<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 	<link rel="stylesheet" href="/css/simplemde.min.css">
+	<link rel="stylesheet" href="/css/flatpickr.min.css">
 </head>
 <body>
-	<section class="hero is-primary is-medium">
+	<div id="app">
+		<section class="hero is-primary is-medium">
 
-		@include('partials.header')
+			@include('partials.header')
 
-	</section>
+		</section>
 
-	<section class="section">
-		<div class="container">
-			<div class="columns">
-				<div class="column is-three-quarters">
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-three-quarters">
 
-					@yield('content')
+						@yield('content')
 
-				</div>
+					</div>
 
-				<div class="column is-one-quarter">
+					<div class="column is-one-quarter">
 
-					@include('partials.sidebar')
+						@include('partials.sidebar')
 
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<footer class="footer">
-  		<div class="container">
+		<footer class="footer">
+	  		<div class="container">
 
-			@include('partials.footer')
+				@include('partials.footer')
 
-		</div>
-	</footer>
+			</div>
+		</footer>
+	</div>
 	
 	<script src="{{ mix('/js/app.js') }}"></script>
+	@yield('scripts')
 </body>
 </html>

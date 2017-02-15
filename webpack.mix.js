@@ -13,5 +13,8 @@ const { mix } = require('laravel-mix');
 
 mix.sass('resources/assets/sass/app.scss', 'public/css')
 	.js('resources/assets/js/app.js', 'public/js/app.js')
+	.copy('node_modules/simplemde/dist/simplemde.min.js', 'public/js')
+	.copy('node_modules/flatpickr/dist/flatpickr.min.js', 'public/js')
+	.copy('node_modules/flatpickr/dist/flatpickr.min.css', 'public/css')
 	.copy('node_modules/simplemde/dist/simplemde.min.css', 'public/css')
 	.version();

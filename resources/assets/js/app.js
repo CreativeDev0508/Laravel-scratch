@@ -1,2 +1,2 @@
-window.SimpleMDE = require('simplemde');
-require('./simplemde.init');
+window.Vue = require('vue');
+require('./vue.bootstrap');
